@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package model;
 
 public class ElectronicProduct extends Product {
@@ -23,3 +24,30 @@ public class ElectronicProduct extends Product {
         System.out.println("Số tháng bảo hành: " + warrantyMonths);
     }
 }
+=======
+package model;
+
+public class ElectronicProduct extends Product {
+
+    private int warrantyMonths;
+
+    public ElectronicProduct(String id, String name, double price, int warrantyMonths) {
+        super(id, name, price);
+        this.warrantyMonths = warrantyMonths;
+    }
+
+    @Override
+    public double calculateFinalPrice() {
+        if (warrantyMonths > 12) {
+            return price + 1000000;
+        }
+        return price;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Số tháng bảo hành: " + warrantyMonths);
+    }
+}
+>>>>>>> 97faaa4ea5e9811bc5ca84cf5717b53ddd74d73c
