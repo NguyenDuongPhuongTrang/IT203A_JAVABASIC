@@ -30,7 +30,10 @@ public class ProductView {
                 case 1:
                     showListProduct();
                     break;
-
+                case 2:
+                    break;
+                case 3:
+                    break;
             }
 
         }
